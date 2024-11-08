@@ -4,8 +4,8 @@ function Header() {
   return (<h1>Ken's Simple React Application</h1>);
 }
 
-function Content() {
-  return (<p>This is my Per Scholas lab</p>);
+function Content(props) {
+  return (<p style={{color: props.color}}>{props.text}</p>);
 }
 
 function Footer() {
@@ -15,7 +15,9 @@ function App() {
   return (
     <>
     <Header />
-    <Content />
+    <Content color="blue" text="This is my React Application!" />
+    <Content color="red" text="Wish me luck..." />
+    <Content color="green" text="I think I've got it!" />
     <Footer />
     </>
   );
